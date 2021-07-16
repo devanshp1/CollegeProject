@@ -15,8 +15,8 @@ class _AniContainerState extends State<AniContainer> {
   Color gradColor2 = Colors.red;
 
   void getRandomSize() {
-    height = Random().nextInt(600).toDouble();
-    width = Random().nextInt(600).toDouble();
+    height = Random().nextInt(500).toDouble();
+    width = Random().nextInt(500).toDouble();
   }
 
   void getRandomColor() {
@@ -37,8 +37,9 @@ class _AniContainerState extends State<AniContainer> {
             decoration: BoxDecoration(
                 color: containercolor,
                 gradient: RadialGradient(colors: [gradColor1, gradColor2],
-                stops: [0.3,0.6,1.0])
+                stops: [0.5,1.0])
                 ),
+                curve: Curves.fastLinearToSlowEaseIn,
             duration: Duration(seconds: 3),
           ),
           ElevatedButton(

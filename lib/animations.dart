@@ -13,18 +13,20 @@ class _AllAnimmationsState extends State<AllAnimmations> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(
-                builder: (BuildContext context)=>
-                AniContainer()
-              ));
-            }, child: Text('Animated Container'))
-          ],
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+          //  mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (BuildContext context)=>
+                  AniContainer()
+                ));
+              }, child: Text('Animated Container'))
+            ],
+          ),
         ),
       ),
     );
